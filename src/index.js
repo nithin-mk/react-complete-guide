@@ -1,15 +1,9 @@
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-
 import './index.css';
 import App from './App';
-import { AuthContextProvider } from './store/auth-context';
+import registerServiceWorker from './registerServiceWorker';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <AuthContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </AuthContextProvider>
-);
+root.render(<App />);
+registerServiceWorker();
